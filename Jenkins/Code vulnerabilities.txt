@@ -1,0 +1,12 @@
+Code vulnerabilities
+==================
+
+Top 10 owaps code vulnerabilities
+
+SonarQube scanner secret key
+============================
+82f4bd950b1969da7d299b77582cce3dfe2ab18e
+
+Slack credentials
+================
+hX7rUUbfiupijB8czxoGiaDL
