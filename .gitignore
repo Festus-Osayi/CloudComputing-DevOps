@@ -1,6 +1,6 @@
 .terraform*
 *.tfstate
-*.tfstate.backup
+*.tfstate.*
 *.hcl
 Resources
 Key_pairs
