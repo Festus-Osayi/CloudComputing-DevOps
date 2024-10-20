@@ -13,7 +13,7 @@ resource "aws_instance" "terraform_demo" {
   availability_zone = "us-east-1a"
   tags = {
     Name    = "Terraform Demo"
-    Project = "Terraform"
+    Project = "terraform"
   }
 
 }
