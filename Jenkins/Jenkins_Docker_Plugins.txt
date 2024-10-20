@@ -1,0 +1,22 @@
+Install the docker engine in Jenkins
+add Jenkins user to docker group and reboot
+install awscli
+Create an IAM User with ECR and ECS permissions
+Create ECR Repo
+Store aws cred in Jenkins
+
+
+
+Plugins
+----------------------
+ECR, docker pipeline, aws sdk for credentials, CloudBeas docker and publish
+
+
+CICD with Docker for container hosting
+---------------
+Create ECS Cluster
+Create ECS service
+
+plugin
+-----
+pipepline:aws steps

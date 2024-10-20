@@ -1,0 +1,12 @@
+# Yaml
+devops:
+  "skill": "DevOps"
+  "Tech": "Software Development"
+  "Cloud": -"AWS"
+    -"GCP"
+  "Container": "K8s"
+  "CI/CD": "Jenkins"
+  "GitOps":
+    - "GitLab"
+    - "ArgoCD"
+    - "Tekton"

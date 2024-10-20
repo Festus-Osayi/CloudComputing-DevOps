@@ -1,0 +1,9 @@
+{
+  "skill": "DevOps",
+  "Tech": {
+    "Cloud": ["AWS", "GCP"],
+    "Container": "K8s",
+    "CI/CD": "Jenkins",
+    "GitOps": ["GitLab", "ArgoCD", "Tekton"]
+  }
+}

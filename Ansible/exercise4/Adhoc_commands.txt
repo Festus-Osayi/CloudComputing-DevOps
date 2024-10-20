@@ -1,0 +1,90 @@
+---- Ansible command and Installing httpd, and enabling httpd service with -----
+
+    1  clear
+    2  exit
+    3  clear
+    4  sudo apt update
+    5  sudo apt install software-properties-common
+    6  sudo add-apt-repository --yes --update ppa:ansible/ansible
+    7  sudo apt install ansible -y
+    8  clear
+    9  mkdir vprofile
+   10  clear
+   11  cd vprofile
+   12  mkddir exercise1
+   13  mkdir exercise1
+   14  cd exercise1
+   15  clear
+   16  vim inventory
+   17  cat inventory
+   18  vim clientkey.pem
+   19  ansible web01 -m ping -i inventory
+   20  cat inventory
+   21  ls -ltr
+   22  clear
+   23  ls
+   24  cat inventory
+   25  chmod 400 clientkey.pem
+   26  ansible web01 -m ping -i inventory
+   27  vim clientkey.pem
+   28  clear
+   29  vim inventory
+   30  ansible web01 -m ping -i inventory
+   31  sudo -i
+   32  clear
+   33  pwd
+   34  ansible web01 -m ping -i inventory
+   35  vim inventory
+   36  cd ..
+   37  cp -r exercise1 exercise2
+   38  cd exercise2
+   39  vim inventory
+   40  ansible web02 -m ping -i inventory
+   41  ansible db01 -m ping -i inventory
+   42  clear
+   43  vim inventory
+   44  ansible webservers -m ping -i inventory
+   45  vim inventory
+   46  clear
+   47  ansible webservers -m ping -i inventory
+   48  vim inventory
+   49  ansible webservers -m ping -i inventory
+   50  vim inventory
+   51  ansible webservers -m ping -i inventory
+   52  vim inventory
+   53  ansible dc_oregon -m ping -i inventory
+   54  vim inventory
+   55  ansible dc_oregon -m ping -i inventory
+   56  ansible all -m ping -i inventory
+   57  ansible '*' -m ping -i inventory
+   58  ansible 'web*' -m ping -i inventory
+   59  clear
+   60  cd ..
+   61  cp -r exercise2 exercise3
+   62  cd exercise3
+   63  vim inventory
+   64  ansible all -m ping -i inventory
+   65  clear
+   66  cd ..
+   67  ls
+   68  cat exercise1/inventory
+   69  cat exercise2/inventory
+   70  cat exercise3/inventory
+   71  clear
+   72  ansible web01 -m ansible.builtin.yum -a "name=httpd state=present"
+   73  ls
+   74  cp -r exercise3 exercise4
+   75  cd exercise4
+   76  clear
+   77  ansible web01 -m ansible.builtin.yum -a "name=httpd state=present" -i inventory
+   78  ansible web01 -m ansible.builtin.yum -a "name=httpd state=present" -i inventory --become
+   79  cat inventory
+   80  ansible web01 -m ansible.builtin.yum -a "name=httpd state=present" -i inventory --become
+   81  ansible web01 -m ansible.builtin.yum -a "name=httpd state=absent" -i inventory --become
+   82  ansible web01 -m ansible.builtin.yum -a "name=httpd state=present" -i inventory --become
+   83  ansible web01 -m ansible.builtin.service -a "name=httpd state=started enabled=yes" --become
+   84  ansible web01 -m ansible.builtin.service -a "name=httpd state=started enabled=yes" -i inventory --become
+   85  clear
+   86  vim index.html
+   87  ansible web01 -m ansible.builtin.copy -a "src=index.html des=/var/www/html" -i inventory --become
+   88  ansible web01 -m ansible.builtin.copy -a "src=index.html dest=/var/www/html" -i inventory --become
