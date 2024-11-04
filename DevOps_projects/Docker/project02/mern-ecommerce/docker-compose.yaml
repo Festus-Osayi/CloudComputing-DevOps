@@ -1,0 +1,12 @@
+---
+
+services:
+  backend:
+    build: ecommerce-admin
+    ports:
+      - "3000:3000"
+
+  frontend:
+    build: ecommerce-front
+    ports:
+      - "4000:3000"
