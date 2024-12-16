@@ -4,3 +4,5 @@
 *.hcl
 Resources
 Key_pairs
+Certifications
+.vagrant

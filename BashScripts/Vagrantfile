@@ -8,7 +8,7 @@ Vagrant.configure("2") do |config|
         # scriptbox.vm.hostname = "scriptbox"
 	scriptbox.vm.provider "virtualbox" do |vb|
      vb.memory = "1024"
-     vb.gui = true
+     #vb.gui = true
    end
   end
 
